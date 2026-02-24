@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Systemy Operacyjne</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #d9eaff, #f2f8ff);
+}
+
+/* Nagłówek */
+header {
+    background: darkblue;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Sekcje */
+section {
+    background: white;
+    margin: 40px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
+}
+
+/* Animacja pojawiania */
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    color: darkblue;
+}
+
+/* Obrazki */
+img {
+    width: 280px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 2px solid darkblue;
+}
+
+th {
+    background: darkblue;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Stopka */
+footer {
+    background: darkblue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>SYSTEMY OPERACYJNE 🔥</h1>
+    <p>Wersja rozszerzona z animacjami i tabelą</p>
+</header>
+
+<section>
+    <h2>1️⃣ Windows</h2>
+    <p>Najpopularniejszy system operacyjny tworzony przez Microsoft.</p>
+    <ul>
+        <li>Dużo gier</li>
+        <li>Łatwy w obsłudze</li>
+        <li>Płatna licencja</li>
+    </ul>
+    <img src="OIP.jpg">
+</section>
+
+<section>
+    <h2>2️⃣ Linux</h2>
+    <p>Darmowy i otwarty system operacyjny używany często na serwerach.</p>
+    <ul>
+        <li>Darmowy</li>
+        <li>Bardzo bezpieczny</li>
+        <li>Trudniejszy dla początkujących</li>
+    </ul>
+    <img src="Distribuciones-de-Linux.jpg">
+</section>
+
+<section>
+    <h2>3️⃣ macOS</h2>
+    <p>System firmy Apple działający na komputerach Mac.</p>
+    <ul>
+        <li>Stabilny</li>
+        <li>Estetyczny</li>
+        <li>Drogi sprzęt</li>
+    </ul>
+    <img src="OIP3.jpg">
+</section>
+
+<section>
+    <h2>📊 Tabela porównawcza systemów</h2>
+
+    <table>
+        <tr>
+            <th>Cecha</th>
+            <th>Windows</th>
+            <th>Linux</th>
+            <th>macOS</th>
+        </tr>
+        <tr>
+            <td>Cena</td>
+            <td>Płatny</td>
+            <td>Darmowy</td>
+            <td>W cenie Maca</td>
+        </tr>
+        <tr>
+            <td>Gry</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐</td>
+            <td>⭐⭐</td>
+        </tr>
+        <tr>
+            <td>Bezpieczeństwo</td>
+            <td>⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+            <td>Łatwość obsługi</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>🎮 Systemy operacyjne a gry</h2>
+
+    <p><b>Windows</b> jest najlepszym wyborem dla graczy, ponieważ obsługuje
+    największą liczbę gier i platform takich jak Steam czy Epic Games.</p>
+
+    <p><b>Linux</b> dzięki technologii Proton pozwala uruchamiać wiele gier,
+    ale nadal ma mniejszą bibliotekę niż Windows.</p>
+
+    <p><b>macOS</b> ma najmniej gier i rzadziej jest wybierany przez graczy.</p>
+</section>
+
+<footer>
+    © 2026 Najlepsza strona o systemach operacyjnych 🚀
+</footer>
+
+<script>
+/* Animacja pojawiania przy scrollowaniu */
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const position = sec.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+
+        if(position < screenPosition) {
+            sec.classList.add("show");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
